@@ -581,14 +581,13 @@ nav ul li a.btn-primary:after {
     margin: 0 auto;
 }
 
-.difference-content p {
-    font-size: 1.2rem;
-    margin-bottom: var(--spacing-md);
-    max-width: 600px;
-    color: #ffffff;
+.difference-content > p {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    color: var(--primary-dark);
     font-weight: 600;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-    letter-spacing: 0.3px;
+    line-height: 1.6;
 }
 
 .difference-points {
@@ -600,9 +599,10 @@ nav ul li a.btn-primary:after {
 .difference-point {
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
-    background-color: var(--off-white);
+    background-color: var(--white);
     transition: all 0.3s ease;
-    border-left: 3px solid var(--primary-light);
+    border-left: 3px solid var(--gold);
+    box-shadow: var(--shadow-md);
 }
 
 .difference-point:hover {
@@ -612,14 +612,22 @@ nav ul li a.btn-primary:after {
 }
 
 .difference-point h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: var(--spacing-xs);
     color: var(--primary-dark);
+    font-weight: 700;
 }
 
 .difference-point h3 i {
     color: var(--gold);
     margin-right: 8px;
+}
+
+.difference-point p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    font-weight: 500;
 }
 
 .our-team {
@@ -1129,6 +1137,8 @@ nav ul li a.btn-primary:after {
     text-align: center;
     overflow: hidden;
     margin-bottom: var(--spacing-xl);
+    margin-top: 140px;
+    padding-top: 60px;
 }
 
 .hero-banner {
