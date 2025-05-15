@@ -1,0 +1,13 @@
+{
+  "name": "daughter-of-compassion",
+  "version": "1.0.0",
+  "description": "Luxury in-home care services website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.1"
+  }
+}
