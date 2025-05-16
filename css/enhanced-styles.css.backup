@@ -3,18 +3,6 @@
    Luxury UI enhancements for an elegant in-home care service website
 */
 
-/* ===== ANIMATIONS ===== */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* ===== LOGO ENHANCEMENT ===== */
 @keyframes logoGlow {
   0% {
@@ -79,190 +67,22 @@
 /* Enhanced hero section styling */
 .hero {
   position: relative;
-  min-height: 700px;
-  overflow: hidden;
-  padding: 3rem 0;
-  display: flex;
-  align-items: center;
 }
 
-/* Parallax hero styling */
-.parallax-hero {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-}
-
-.hero-background, .page-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.parallax-page {
-  position: relative;
-  min-height: 100vh;
-}
-
-.page-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-  overflow: hidden;
-}
-
-.page-background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.hero-background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-/* Card-style treatment for specific sections only */
-.services, .contact, footer {
-  position: relative;
-  z-index: 10;
-  background-color: var(--white);
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  padding: 2rem;
-  margin-bottom: var(--spacing-xl);
-}
-
-/* Card-style treatment for about page sections */
-.parallax-page .our-story, .parallax-page .our-values, .parallax-page .our-difference, .parallax-page .our-team {
-  position: relative;
-  z-index: 10;
-  background-color: var(--white);
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  padding: 2rem;
-  margin-bottom: var(--spacing-xl);
-}
-
-/* Ensure all text on background images is bright white */
-.hero h1, .hero h2, .hero p,
-.full-width-image h2, .full-width-image p, .full-width-image a:not(.btn-primary),
-.cta h2, .cta p, .cta a:not(.btn-primary),
-.testimonials h2, .testimonials-intro,
-.why-choose h2,
-.about-hero h1, .about-hero p {
-  color: #FFFFFF;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-/* Add semi-transparent overlay to sections */
-.cta, .testimonials, .why-choose, .about-hero {
-  position: relative;
-}
-
-.cta::before, .testimonials::before, .why-choose::before, .about-hero::before {
+.hero::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
-  z-index: -1;
-}
-
-.cta .container, .testimonials .container, .why-choose .container {
-  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
-}
-
-.about-hero {
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 140px;
-  margin-bottom: var(--spacing-xl);
-}
-
-.about-hero .container {
-  position: relative;
-  z-index: 1;
-}
-
-.about-hero-content {
-  max-width: 600px;
-  background-color: rgba(0, 0, 0, 0.65);
-  padding: 2.5rem 2.5rem 3rem;
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(5px);
-  border: 1px solid var(--gold);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(212, 175, 55, 0.2);
-  position: relative;
-  overflow: hidden;
-  animation: fadeIn 1s ease-out;
-  margin: 0 1.5rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .hero .container {
   position: relative;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: auto;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-}
-
-.hero-content {
-  width: auto;
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.65);
-  padding: 2.5rem 2.5rem 3rem;
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(5px);
-  border: 1px solid var(--gold);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(212, 175, 55, 0.2);
-  position: relative;
-  overflow: hidden;
-  animation: fadeIn 1s ease-out;
-}
-
-.hero-content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
 }
 
 .hero h1, .hero h2, .hero p {
@@ -328,99 +148,41 @@
   z-index: 0;
 }
 
-/* ===== INTRO SECTION ===== */
-.intro {
-  position: relative;
-  z-index: 5;
-  background: transparent;
-}
-
-.intro-content h2 {
-  color: #FFFFFF;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-/* ===== INTRO CARD ===== */
-.intro-card {
-  background-color: rgba(0, 0, 0, 0.65);
-  padding: 2rem 2.5rem;
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(5px);
-  border: 1px solid var(--gold);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(212, 175, 55, 0.2);
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 3rem;
-}
-
-.intro-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
-}
-
-.intro-card p {
-  color: var(--white);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  margin-bottom: 0;
-}
-
 /* ===== PULL QUOTES ===== */
 .pull-quote {
   position: relative;
   max-width: 800px;
   margin: 3rem auto;
-  padding: 2.5rem 3rem;
+  padding: 2rem 3rem;
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 300;
   font-style: italic;
-  color: var(--white);
+  color: var(--primary-dark);
   text-align: center;
   line-height: 1.6;
-  background-color: rgba(0, 0, 0, 0.65);
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(5px);
-  border: 1px solid var(--gold);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(212, 175, 55, 0.2);
-  overflow: hidden;
 }
 
 .pull-quote::before {
-  content: '';
+  content: '"';
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  font-size: 6rem;
+  color: var(--gold);
+  opacity: 0.3;
+  font-family: Georgia, serif;
 }
 
 .pull-quote::after {
   content: '"';
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: -60px;
+  right: 0;
   font-size: 6rem;
   color: var(--gold);
   opacity: 0.3;
   font-family: Georgia, serif;
-}
-
-/* Opening quote mark using a pseudo-element */
-.pull-quote .quote-mark-open {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 6rem;
-  color: var(--gold);
-  opacity: 0.3;
-  font-family: Georgia, serif;
-  line-height: 0;
 }
 
 .pull-quote-attribution {
@@ -737,14 +499,6 @@
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-}
-
-.hero-buttons {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
 }
 
 .testimonial-dot {

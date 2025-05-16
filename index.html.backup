@@ -50,11 +50,9 @@
     </header>
     <div class="menu-overlay"></div>
 
-    <section id="home" class="hero parallax-hero">
-        <div class="hero-background">
-            <img src="images/doc image 111.jpg" alt="Daughter of Compassion - Luxury Care">
-        </div>
-        <div class="hero-content">
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
                 <h1>Exceptional Care. <span class="gold-text">Unwavering Compassion.</span></h1>
                 <div class="gold-divider"></div>
                 <h2>Luxury In-Home Support for Those Who Deserve the Best</h2>
@@ -64,6 +62,10 @@
                     <a href="#services" class="btn-secondary">Explore Our Services</a>
                 </div>
             </div>
+            <div class="hero-image">
+                <img src="images/doc image 111.jpg" alt="Daughter of Compassion - Luxury Care">
+            </div>
+        </div>
     </section>
 
     <section id="intro" class="intro">
@@ -72,12 +74,9 @@
                 <div class="intro-content gold-pattern">
                     <h2>Exceptional Home Care, Tailored for Comfort and Dignity</h2>
                     <div class="gold-divider"></div>
-                    <div class="intro-card">
-                        <p>Our compassionate caregivers deliver personalized support, ensuring you or your loved one can maintain independence while receiving world-class care—all within the familiarity of home.</p>
-                    </div>
+                    <p>Our compassionate caregivers deliver personalized support, ensuring you or your loved one can maintain independence while receiving world-class care—all within the familiarity of home.</p>
                     
                     <blockquote class="pull-quote">
-                        <span class="quote-mark-open">"</span>
                         We believe that exceptional care is not just about meeting needs—it's about enhancing lives with dignity, respect, and unwavering compassion.
                         <span class="pull-quote-attribution">— Daughter of Compassion</span>
                     </blockquote>
@@ -215,7 +214,7 @@
         </div>
     </section>
 
-    <section class="full-width-image" style="background-image: url('images/doc image 777.jpg');">
+    <section class="full-width-image" style="background-image: url('images/doc image 6.jpg');">
         <div class="full-width-content">
             <h2>Exceptional Care in the Comfort of Home</h2>
             <p>We bring luxury care services to your doorstep, ensuring comfort, dignity, and peace of mind.</p>

@@ -1150,10 +1150,10 @@ nav ul li a.btn-primary:after {
 
 /* ===== SERVICES SECTION ===== */
 .services {
-    background-color: var(--off-white);
     text-align: center;
     scroll-margin-top: 150px; /* Extra scroll margin for services section */
     padding-top: calc(var(--spacing-xl) + 20px); /* Extra top padding */
+    margin-bottom: var(--spacing-xl);
 }
 
 /* ===== ABOUT PAGE STYLES ===== */
@@ -1508,10 +1508,10 @@ nav ul li a.btn-primary:after {
 
 /* ===== TESTIMONIALS SECTION ===== */
 .testimonials {
-    background-color: var(--light-gray);
     text-align: center;
     scroll-margin-top: 150px; /* Extra scroll margin for testimonials section */
     padding-top: calc(var(--spacing-xl) + 20px); /* Extra top padding */
+    position: relative;
 }
 
 .testimonials-header {
@@ -1529,7 +1529,6 @@ nav ul li a.btn-primary:after {
 .testimonials-intro {
     font-size: 1.1rem;
     margin-top: var(--spacing-sm);
-    color: var(--accent);
 }
 
 .testimonials-image {
@@ -1636,9 +1635,9 @@ nav ul li a.btn-primary:after {
 
 /* ===== CTA SECTION ===== */
 .cta {
-    background-color: var(--primary);
-    color: var(--white);
     text-align: center;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
 }
 
 .cta h2, .cta p {
@@ -1683,6 +1682,7 @@ nav ul li a.btn-primary:after {
 /* ===== CONTACT SECTION ===== */
 .contact {
     text-align: center;
+    margin-bottom: var(--spacing-xl);
 }
 
 .contact h2 {
@@ -1782,9 +1782,9 @@ nav ul li a.btn-primary:after {
 
 /* ===== FOOTER ===== */
 footer {
-    background-color: var(--text-dark);
-    color: #000000;
+    color: var(--text-dark);
     padding: var(--spacing-lg) 0 var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
 }
 
 .footer-content {
