@@ -68,6 +68,11 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     background-color: var(--white);
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -208,17 +213,12 @@ section {
 
 /* ===== HEADER & NAVIGATION ===== */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     background-color: var(--white);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 0;
-    transition: all 0.3s ease;
-    height: 140px;
-    overflow: hidden;
+    padding: var(--spacing-sm) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
 }
 
 header .container {
@@ -226,9 +226,38 @@ header .container {
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
-    margin: 0 auto;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: block;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* Mobile Menu Overlay */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
 }
 
 .header-left {
@@ -1897,8 +1926,98 @@ footer {
         padding: var(--spacing-xs) 0;
     }
     
-    nav ul {
-        display: none; /* Would implement mobile menu with JS */
+    .desktop-nav {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .mobile-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--white);
+        box-shadow: var(--shadow-lg);
+        z-index: 1000;
+        transition: right 0.3s ease;
+        overflow-y: auto;
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+    .mobile-nav.active {
+        right: 0;
+    }
+    
+    .mobile-nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-lg);
+    }
+    
+    .mobile-nav ul li {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .mobile-nav ul li a {
+        display: block;
+        padding: var(--spacing-xs) 0;
+        font-size: 1.2rem;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 1001;
+        cursor: pointer;
+        width: 30px;
+        height: 24px;
+    }
+    
+    .mobile-menu-toggle span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: var(--primary-dark);
+        border-radius: 3px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+    
+    .mobile-menu-toggle span:nth-child(1) {
+        top: 0px;
+    }
+    
+    .mobile-menu-toggle span:nth-child(2) {
+        top: 10px;
+    }
+    
+    .mobile-menu-toggle span:nth-child(3) {
+        top: 20px;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+        top: 10px;
+        transform: rotate(135deg);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        top: 10px;
+        transform: rotate(-135deg);
     }
     
     .hero-buttons {
